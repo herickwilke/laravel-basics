@@ -11,23 +11,15 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('/app')->group(function()
-{
-    Route::get('/', function() {
-        return view('app');
-    })->name('app');
+Route::get('produtos', 'MeuControlador@produtos');
+Route::get('nome', 'MeuControlador@getNome');
+Route::get('idade', 'MeuControlador@getIdade');
+Route::get('multiplicar/{n1}/{n2}', 'MeuControlador@multiplicar');
 
-    Route::get('/user', function() {
-        return view('user');
-    })->name('app.user');;
-
-    Route::get('/profile', function() {
-        return view('profile');
-    })->name('app.profile');;
-
-}
-);
+Route::resource('clientes', 'ClienteControlador');
