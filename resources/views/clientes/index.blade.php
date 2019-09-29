@@ -2,9 +2,10 @@
 
 <a href="{{ route('clientes.create')}}">NOVO CLIENTE</a>
 
-<ol>
+<ul>
     @foreach ($clientes as $c)    
-    <li>{{ $c['nome'] }} |
+    <li>
+        {{ $c['id'] }} | {{ $c['nome'] }} |
         <a href="{{ route('clientes.edit', $c['id'] )}}">Editar</a> |
         <a href="{{ route('clientes.show', $c['id'] )}}">Info</a> |
         <form action="{{ route('clientes.destroy', $c['id'])}}" method="POST">
@@ -13,4 +14,4 @@
         <input type="submit" value="Apagar">    
     </li> 
     @endforeach
-</ol>
+</ul>
