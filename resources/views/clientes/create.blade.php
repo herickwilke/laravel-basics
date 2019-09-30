@@ -1,5 +1,7 @@
 @extends('layouts.principal')
 @section('conteudo')
+@section('titulo', 'Novo Cliente')
+
 <h3>Novo cliente</h3>
 
 <form action="{{ route('clientes.store')}}" method="POST">
