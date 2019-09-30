@@ -11,4 +11,24 @@
     <li>Roupas</li>
 </ul>
 
+@alerta (['tipo'=>'warning','titulo'=>'Erro Fatal'])
+<p><strong>Erro inesperado</strong></p>
+<p>Ocorreu um erro inesperado.</p>
+@endalerta
+
+@alerta (['tipo'=>'info','titulo'=>'Erro Fatal'])
+<p><strong>Erro inesperado</strong></p>
+<p>Ocorreu um erro inesperado.</p>
+@endalerta
+
+@alerta (['tipo'=>'success','titulo'=>'Erro Fatal'])
+<p><strong>Erro inesperado</strong></p>
+<p>Ocorreu um erro inesperado.</p>
+@endalerta
+
+@alerta (['tipo'=>'error','titulo'=>'Erro Fatal'])
+<p><strong>Erro inesperado</strong></p>
+<p>Ocorreu um erro inesperado.</p>
+@endalerta
+
 @endsection
