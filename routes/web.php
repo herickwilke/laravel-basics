@@ -16,10 +16,13 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('produtos', 'MeuControlador@produtos');
+Route::get('produtos', function(){
+    return view('outras.produtos');
+})->name('produtos');
+Route::get('departamentos', function(){
+    return view('outras.departamentos ');
+})->name('departamentos');
 Route::get('nome', 'MeuControlador@getNome');
 Route::get('idade', 'MeuControlador@getIdade');
 Route::get('multiplicar/{n1}/{n2}', 'MeuControlador@multiplicar');
-
 Route::resource('clientes', 'ClienteControlador');

@@ -1,6 +1,11 @@
-<h3>Clientes</h3>
+@extends('layouts.principal')
+@section('conteudo')
+
+<h3>{{$titulo}}</h3>
 
 <a href="{{ route('clientes.create')}}">NOVO CLIENTE</a>
+
+@if(count($clientes)>0) 
 
 <ul>
     @foreach ($clientes as $c)    
@@ -15,3 +20,14 @@
     </li> 
     @endforeach
 </ul>
+
+@else
+<h4>Não existem usuários cadastrados.</h4>
+
+@endif
+
+@empty($clientes)
+<h4>Não existem clientes cadastrados.</h4>
+@endempty 
+
+@endsection
