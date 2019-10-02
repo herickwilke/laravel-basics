@@ -4,16 +4,10 @@
 
 <div class="options">
     <ul>
-        <li> <a class="{{request()->RouteIs('opcoes') && ($opcao == 1) ? 'warning selected' : 'warning'}}" 
-            
-            
-
-            href="{{route('opcoes',1)}}">warning</a> </li>
-
-
-        <li> <a class="success"  href="{{route('opcoes',2)}}">success</a> </li>
-        <li> <a class="info"     href="{{route('opcoes',3)}}">info</a> </li>
-        <li> <a class="error"    href="{{route('opcoes',4)}}">error</a> </li>
+        <li> <a class="{{request()->RouteIs('opcoes') && ($opcao == 1) ? 'warning selected' : 'warning'}}" href="{{route('opcoes',1)}}">warning</a> </li>
+        <li> <a class="{{request()->RouteIs('opcoes') && ($opcao == 2) ? 'success selected' : 'success'}}"  href="{{route('opcoes',2)}}">success</a> </li>
+        <li> <a class="{{request()->RouteIs('opcoes') && ($opcao == 3) ? 'info selected' : 'info'}}"     href="{{route('opcoes',3)}}">info</a> </li>
+        <li> <a class="{{request()->RouteIs('opcoes') && ($opcao == 4) ? 'error selected' : 'error'}}"    href="{{route('opcoes',4)}}">error</a> </li>
     </ul>
 </div>
 
